@@ -1,18 +1,20 @@
-# Keras backends
+# 캐라스 backends
 
-## What is a "backend"?
+## "bakend"는 무엇 입니까? 
 
-Keras is a model-level library, providing high-level building blocks for developing deep learning models. It does not handle itself low-level operations such as tensor products, convolutions and so on. Instead, it relies on a specialized, well-optimized tensor manipulation library to do so, serving as the "backend engine" of Keras. Rather than picking one single tensor library and making the implementation of Keras tied to that library, Keras handles the problem in a modular way, and several different backend engines can be plugged seamlessly into Keras.
+케라스는 딥러닝 모델을 개발하기 위한 상위-수준의 구성요성 요소를 제공하는 모델-레벨의 라이브러리입니다. 케라스는 텐서 곱셈, 컨볼루션 등의 저수준의 연산을 제공하지 않습니다. 대신 케라스의 "백엔드 엔진"역할을 하는 특수하고 잘 최적화 된 텐서 라이브러리에 의존합니다. 하나의 단일 텐서 라이브러리를 선택하고 Keras 구현을 해당 라이브러리에 묶는 대신 Keras는 모듈 방식으로 문제를 처리하며 여러 다른 백엔드 엔진을 Keras에 원활하게 연결할 수 있습니다.
 
-At this time, Keras has three backend implementations available: the **TensorFlow** backend, the **Theano** backend, and the **CNTK** backend.
+현재, 케라스에는 3가지 벡엔드가 구현되어 있습니다: **TensorFlow(텐셔플로우)** 백엔드, **Theano(씨아노)** 백엔드, 그리고 **CNTK** 백엔드.
 
 - [TensorFlow](http://www.tensorflow.org/) is an open-source symbolic tensor manipulation framework developed by Google.
-- [Theano](http://deeplearning.net/software/theano/) is an open-source symbolic tensor manipulation framework developed by LISA Lab at Université de Montréal.
+- [Theano](http://deeplearning.net/software/theano/) is an open-source symbolic tensor manipulation framework developed by LISA Lab at Université de Montréal.What is a "backend"
 - [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/) is an open-source toolkit for deep learning developed by Microsoft.
 
 In the future, we are likely to add more backend options.
 
-----
+---- about-keras-layers.md 번역 초안 #8
+Open
+
 
 ## Switching from one backend to another
 
@@ -38,7 +40,7 @@ The default configuration file looks like this:
 Simply change the field `backend` to `"theano"`, `"tensorflow"`, or `"cntk"`, and Keras will use the new configuration next time you run any Keras code.
 
 You can also define the environment variable ``KERAS_BACKEND`` and this will
-override what is defined in your config file :
+override what is defined in your coWhat is a "backend"nfig file :
 
 ```bash
 KERAS_BACKEND=tensorflow python -c "from keras import backend"
@@ -4005,6 +4007,8 @@ def dropout(x, level, noise_shape=None, seed=None):
 keras.backend.l2_normalize(x, axis=None)
 ```
 
+ about-keras-layers.md 번역 초안 #8
+Open
 
 Normalizes a tensor wrt the L2 norm alongside the specified axis.
 
